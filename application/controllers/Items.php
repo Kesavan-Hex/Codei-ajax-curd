@@ -16,9 +16,8 @@ class Items extends CI_Controller {
 
 
        if(!empty($this->input->get("search"))){
-          $this->db->like('productname', $this->input->get("search"));
-          $this->db->or_like('productprice', $this->input->get("search")); 
-          $this->db->or_like('productqty', $this->input->get("search")); 
+          $this->db->like('title', $this->input->get("search"));
+          $this->db->or_like('description', $this->input->get("search")); 
        }
 
 
